@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Color */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    /* Gradient */
+    --light-slate-blue: hsl(252, 100%, 67%);    /* background */
+    --light-royal-blue: hsl(241, 81%, 54%);     /* background */ 
+    --violet-blue: hsla(256, 72%, 46%, 1);      /* circle */
+    --persian-blue: hsla(241, 72%, 46%, 0);     /* circle */
+    /* Neutral Color */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 89%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%); 
+}
+
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 5px 8px 12px hsla(241, 81%, 54%, 0.5);
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+    transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 9px 10px 20px hsla(241, 81%, 54%, 0.8);
+}
+
+.result {
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    color: white;
+    flex: 1;
+    max-width: 290px;
+    text-align: center;
+    border-radius: 15px 25px 25px 15px;
+    height: auto;
+}
+
+.result .score {
+    margin: -15px auto;
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    width: 50%;
+    height: 35%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.result h3 {
+    color: var(--light-lavender);
+    margin: 35px auto;
+    text-align: center;
+}
+
+.result .score .main-score {
+    font-size: 4em; 
+    margin-bottom: -5px; 
+}
+
+.result .score .sub-score {
+    font-size: 14px;
+    color: var(--pale-blue);
+    font-weight: 600;
+}
+
+.result .great {
+    font-size: 1.5em;
+    margin: 45px auto;
+    font-weight: 600;
+}
+
+.result p {
+    color: var(--light-lavender);
+    margin: -85px auto;
+    padding: 50px;
+    font-size: 0.89em;
+}
+
+.summary {
+    padding: 30px;
+    text-align: left;
+    color: var(--dark-gray-blue);
+}
+
+.summary h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.summary .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 8px;
+    flex-direction: row;
+}
+
+.summary .detail .type {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.summary .detail .type img {
+    margin-right: 10px;
+}
+
+.reaction {
+    color: var(--light-red);
+    background-color: #FFF6F5;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.memory {
+    color: var(--orangey-yellow);
+    background-color: #FFFBF2;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.verbal {
+    color: var(--green-teal);
+    background-color: #F2FBFA;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.visual {
+    color: var(--cobalt-blue);
+    background: #F3F3FD;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.bold-number {
+    font-weight: 700;
+    color: var(--dark-gray-blue);
+}
+  
+.light-text {
+    color: #BAB5BB;
+    font-weight: 700;
+}
+
+.continue-btn {
+    display: inline-block;
+    padding: 12px 90px;
+    background-color: var(--dark-gray-blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.continue-btn:hover {
+    background-color: hsl(224, 30%, 37%); /* Lighter color on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.continue-btn:focus {
+    outline: 2px solid var(--cobalt-blue);
+    outline-offset: 2px;
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.attribution a {
+    color: #333;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+.attribution a:focus {
+    outline: 2px solid var(--cobalt-blue);
+    outline-offset: 2px;
+}
+
+.summary .detail {
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.summary .detail:focus {
+    outline: 2px solid var(--cobalt-blue);
+    outline-offset: 2px;
+}
+
+/* Specific hover color adjustments for each detail section */
+.reaction:hover {
+    background-color: #FFE0E0;
+}
+
+.reaction:focus {
+    outline: 2px solid var(--light-red);
+    outline-offset: 2px;
+}
+
+.memory:hover {
+    background-color: #FFF8D0;
+}
+
+.memory:focus {
+    outline: 2px solid var(--orangey-yellow);
+    outline-offset: 2px;
+}
+
+.verbal:hover {
+    background-color: #D0FFF5;
+}
+
+.verbal:focus {
+    outline: 2px solid var(--green-teal);
+    outline-offset: 2px;
+}
+
+.visual:hover {
+    background-color: #E0E0FF;
+}
+
+.visual:focus {
+    outline: 2px solid var(--cobalt-blue);
+    outline-offset: 2px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 630px) {
+    body {
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .result {
+        max-width: 100%;
+        border-radius: 0 0 35px 35px;
+    }
+
+    .result .score {
+        width: 35vw;
+        height: 35vw;
+        margin: 34px auto;
+    }
+
+    .result .score .main-score {
+        font-size: 12vw;
+    }
+
+    .result .score .sub-score {
+        font-size: 3vw;
+    }
+
+    .result h3 {
+        margin: 20px auto;
+    }
+
+    .result .great {
+        margin: -10px auto;
+    }
+
+    .result p {
+        margin: 20px auto;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .summary {
+        padding: 20px;
+    }
+
+    .summary h3 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    .summary .detail {
+        gap: 20px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .summary .detail .type {
+        font-size: 1em;
+    }
+
+    .continue-btn {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .attribution {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+}
