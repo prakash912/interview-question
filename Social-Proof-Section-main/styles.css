@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary Colors */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /* Netural Colors */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    background: url(./images/bg-pattern-top-desktop.svg),
+    url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 0vw top -6vh, right 0vw bottom -14vh;
+    display: flex;
+    padding: 80px 150px;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.container .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.container .top .left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+  
+.left h1 {
+    font-size: 3rem;
+    color: hsl(300, 43%, 22%);
+}
+  
+.left p {
+    font-size: 18px;
+    color: hsl(303, 10%, 53%);
+    line-height: 20px;
+    font-weight: 500;
+}
+  
+.container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+  
+.right .rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background: hsl(300, 24%, 96%);
+    color: hsl(300, 43%, 22%);
+}
+  
+.rating .stars {
+    width: fit-content;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+  
+.rating p {
+    font-size: 15px;
+    font-weight: 800;
+}
+  
+.rating .stars {
+    margin: 0 auto;
+}
+
+.one{
+    margin-left: 30px;
+}
+
+.two {
+    margin-left: 90px;
+  }
+  
+.three {
+    margin-left: 150px;
+}
+
+.stars img {
+    height: 16px;
+    margin-right: 2px;
+}
+  
+.container .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+}
+  
+.bottom .box {
+    background: hsl(300, 43%, 22%);
+    color: #fff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-2 {
+    margin-top: 24px;
+}
+  
+.card-3 {
+    margin-top: 48px;
+}
+  
+.bottom .box .info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+  
+.info img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+  
+.info p {
+    font-size: 15px;
+}
+  
+.info p span {
+    color: hsl(333, 80%, 67%);
+    line-height: 20px;
+}
+  
+.box p {
+    line-height: 20px;
+}  
+
+.attribution {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.attribution a, .attribution a:visited {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 730px) {
+    body {
+      background: #fff;
+      overflow: visible;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 30px;
+    }
+  
+    .container {
+      width: 400px;
+      gap: 20px;
+    }
+  
+    .container .top {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .container .top .left {
+      width: 100%;
+      flex-direction: column;
+      gap: 25px;
+    }
+  
+    .container .right {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .right .rating {
+      justify-content: center;
+    }
+  
+    .one,
+    .two,
+    .three {
+      margin: 0;
+    }
+  
+    .container .bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card-2,
+    .card-3 {
+      margin-top: 0;
+    }
+  
+    .right .rating {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .box .text p {
+      justify-content: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+      width: 350px;
+      padding: 0px 30px;
+    }
+  
+    .container .top {
+      width: 100%;
+    }
+  
+    .right {
+      width: 100%;
+    }
+  
+    .right .rating {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
