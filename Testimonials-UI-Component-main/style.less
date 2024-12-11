@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto:wght@400;600&display=swap");
+
+@darkBlue: #071C4D;
+@brightBlue: #175CFF;
+@charcoalGray: #202020;
+@lightCoral: #FE6B7E;
+@deepNavyBlue: #0B163F;
+@mediumGreen: #22C55E;
+@lightGray: #D9D9D9;
+@veryLightGray: #F8F9FA;
+@white: #FFFFFF;
+@mediumAquamarine: #5BB297;
+@veryLightBlue: #CEDDFF;
+@paleMintGreen: #DEF4ED;
+@veryLightPink: #FCDDE1;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: @veryLightGray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.testimonial-section{
+    width: 90%;
+    max-width: 1200px;
+
+    .testimonial-slider{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 50px;
+
+        h1{
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            max-width: 500px;
+            width: 100%;
+            color: @deepNavyBlue;
+
+            @media (max-width: 768px) {
+                font-size: 36px;
+                width: 60%;
+            }
+        }
+
+        .button{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            @media (max-width: 375px) {
+                display: none;
+            }
+
+            .arrow{
+                background: none;
+                border: none;
+                height: 64px;
+                width: 64px;
+                font-size: 22px;
+                color: @deepNavyBlue;
+                cursor: pointer;
+                border-radius: 50%;
+                transition: all 0.3s;
+
+                @media (max-width: 378px) {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                &.left{
+                    border: 1px solid @deepNavyBlue;
+
+                    &:hover{
+                        background: lighten(@deepNavyBlue, 20%);
+                        color: @white;
+                    }
+                }
+                
+                &.right{
+                    background-color: @deepNavyBlue;
+                    color: @white;
+
+                    &:hover{
+                        background: lighten(@deepNavyBlue, 20%);
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonials-wrapper {
+        overflow: hidden;
+        width: 100%;
+
+        @media (max-width: 378px) {
+            overflow: visible;
+            margin-left: -10px;
+            width: 50%;
+            word-wrap: break-word;
+        }
+
+        .testimonials {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 80px;
+
+            @media (max-width: 375px) {
+                flex-direction: column;
+                width: 90%;
+                gap: 0
+            }
+
+            .testimonial-card {
+                flex: 0 0 100%;
+                padding: 22px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                text-align: left;
+                color: @white;
+                margin: 30px 0;
+                display: block;
+                max-width: 398px;
+                width: 100%;
+
+                @media (max-width: 668px) {
+                    flex: 0 0 50%;
+                }
+
+                &.green {
+                    background-color: @paleMintGreen;
+                    box-shadow: 6px 6px @mediumAquamarine;
+
+                    .stars{
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 20px;
+                        flex-wrap: wrap;
+    
+                        span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: @mediumGreen;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                &.pink{
+                    background-color: @veryLightPink;
+                    box-shadow: 6px 6px @lightCoral;
+
+                    .stars{
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 20px;
+    
+                        span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: @lightCoral;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                &.blue{
+                    background-color: @veryLightBlue;
+                    box-shadow: 6px 6px @brightBlue;
+
+                    .stars{
+                        display: flex;
+                        gap: 10px;
+                        margin-bottom: 20px;
+    
+                        span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: @brightBlue;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+
+                h2{
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-weight: 700;
+                    font-size: 32px;
+                    color: @darkBlue;
+                    margin-bottom: 10px;
+
+                    @media (max-width: 378px) {
+                        font-size: 20px;
+                    }
+                }
+
+                p{
+                    font-size: 18px;
+                    color: @charcoalGray;
+                    margin-bottom: 25px;
+
+                    @media (max-width: 378px) {
+                        font-size: 14px;
+                    }
+                }
+
+                .author {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    @media (max-width: 378px) {
+                        flex-direction: column;
+                    }
+
+                    img {
+                        border-radius: 50%;
+                        height: 60px;
+                        width: 60px;
+                        object-fit: cover;
+                    }
+
+                    div{
+                        margin-bottom: -20px;
+                        
+                        h3 {
+                            font-size: 14px;
+                            margin: 5px 0;
+                            font-weight: 600;
+                            color: @darkBlue;
+                        }
+                        
+                        p{
+                            color: @charcoalGray;
+                            font-size: 12px;
+                        }
+                    }
+                }                  
+            }
+        }
+    }
+}
