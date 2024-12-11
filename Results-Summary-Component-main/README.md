@@ -1,20 +1,5 @@
 # Results summary component solution
 
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [Installation](#installation)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-- [Support](#support)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [Authors and Acknowledgment](#authors-and-acknowledgment)
-
 ## Overview
 
 ### The challenge
