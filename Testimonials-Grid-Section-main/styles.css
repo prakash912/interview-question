@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary Colors */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Netural Colors */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--light-grayish-blue);
+    font-family: "Barlow Semi Condensed", sans-serif; 
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6{    font-weight: 500;    }
+
+p{    line-height: 1.4;     }
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.cards{
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    color: var(--white);
+}
+
+.cards.mviolet{    background-color: var(--moderate-violet);    }
+
+.cards.mviolet small {    color: hsla(263, 55%, 86%, 0.7);    }
+
+.cards.gray-blue{    background-color: var(--very-dark-grayish-blue);    }
+
+.cards.white{
+    background-color: var(--white);
+    color: var(--very-dark-grayish-blue);
+}
+
+.cards.white p {    color: hsla(219, 35%, 38%, 0.7);   }
+
+.cards.black-blue{    background-color: var(--very-dark-blackish-blue);    }
+
+.cards .quotes{
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 90px;
+}
+
+.cards .image{
+    display: flex;
+    align-items: center;
+}
+
+.cards .image img{
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 44px;
+    border: 3px solid var(--light-gray);
+}
+
+.cards h4{
+    margin: 20px 0;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.cards p{
+    font-size: 15px;
+    color: var(--light-gray);
+}
+
+@media (max-width: 628px) {
+    .cards .image {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cards .image img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+
+@media (min-width: 640px){
+    .container{        
+        grid-template-columns: repeat(2 , 1fr);    
+    }
+}
+
+@media (min-width: 1280px){
+    .container{
+        grid-template-columns: repeat(4 , 1fr);
+        max-width: 1200px;
+        margin: 150px auto;
+    }
+
+    .cards.mviolet{        grid-column: 1/3;    }
+
+    .cards.black-blue{        grid-column: 2/4;    }
+
+    .cards.final{
+        grid-column: 4;
+        grid-row: 1/3;
+    }
+}
