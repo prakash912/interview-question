@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<section class="ezy__header8 light">
+  <div class="container position-relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-5 col-xl-4 order-lg-2 mb-4 mb-lg-0 text-center text-lg-start">
+        <img src="https://cdn.easyfrontend.com/pictures/team/team_13_3.jpg" alt=""
+          class="img-fluid ezy__header8-img" />
+      </div>
+      <div class="col-lg-7 ps-lg-4 ps-xl-5">
+        <p class="ezy__header8-sub-heading mb-2 opacity-50">UI UX Designer</p>
+        <h2 class="ezy__header8-heading mb-4">Sara Taylor</h2>
+        <p class="ezy__header8-sub-heading opacity-75">
+          I'm a UI/UX Designer based in Bangladesh and enjoy playing with colors. I love travelling, photography &
+          music.
+        </p>
+
+        <div class="mt-5 ms-lg-5 p-3 px-md-5 py-lg-4 border-start border-secondary ezy__header8-meta">
+          <p class="fs-4 mb-1"><span class="opacity-50 me-2 fw-light">Born in</span><strong>Bangladesh</strong></p>
+          <p class="fs-4 mb-1"><span class="opacity-50 me-2 fw-light">Experience</span><strong>7+ Years</strong></p>
+          <p class="fs-4 mb-0">
+            <span class="opacity-50 me-2 fw-light">Date of Birth</span><strong>21 June 1994</strong>
+          </p>
+
+          <ul class="ezy__header8-social nav d-inline-flex mt-4">
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-dribbble"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-behance"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+
+<style>
+.ezy__header8 {
+  /* Bootstrap variables */
+  --bs-body-color: #373572;
+  --bs-body-bg: rgb(255, 255, 255);
+
+  /* Easy Frontend variables */
+  --ezy-theme-color: rgb(13, 110, 253);
+  --ezy-theme-color-rgb: 13, 110, 253;
+  --ezy-shadow: 0px 4px 44px rgba(159, 190, 218, 0.37);
+
+  background-color: var(--bs-body-bg);
+  overflow: hidden;
+  padding: 80px 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .ezy__header8 {
+    padding: 150px 0;
+  }
+}
+
+/* Gray Block Style */
+.gray .ezy__header8,
+.ezy__header8.gray {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(246, 246, 246);
+
+  /* Easy Frontend variables */
+  --ezy-shadow: 0px 4px 44px rgba(125, 153, 177, 0.37);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__header8,
+.ezy__header8.dark-gray {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(30, 39, 53);
+
+  /* Easy Frontend variables */
+  --ezy-shadow: 0px 4px 44px rgba(44, 44, 44, 0.37);
+}
+
+/* Dark Block Style */
+.dark .ezy__header8,
+.ezy__header8.dark {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(11, 23, 39);
+
+  /* Easy Frontend variables */
+  --ezy-shadow: 0px 4px 44px rgba(0, 0, 0, 0.37);
+}
+
+.ezy__header8-heading {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 25px;
+  color: var(--bs-body-color);
+}
+
+@media (min-width: 768px) {
+  .ezy__header8-heading {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+.ezy__header8-sub-heading {
+  color: var(--bs-body-color);
+  font-size: 20px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.ezy__header8-meta {
+  color: var(--bs-body-color);
+}
+
+.ezy__header8-img {
+  border: 20px solid rgba(244, 247, 253, 0.1);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 30px 30% 30px 30%;
+}
+
+.ezy__header8-social li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.ezy__header8-social li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.ezy__header8-social li a {
+  color: var(--bs-body-color);
+  text-decoration: none;
+  font-size: 25px;
+  opacity: 0.7;
+  transition: opacity 0.35s ease-in-out, color 0.35s ease-in-out;
+}
+
+.ezy__header8-social li a:hover {
+  opacity: 1;
+}
+</style>
